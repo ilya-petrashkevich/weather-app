@@ -1,0 +1,143 @@
+.global-container {
+  width: 90%;
+  margin: 0 auto;
+
+  .toolbar1 {
+    width: 100%;
+    min-width: 500px;
+    height: 8vh;
+    padding-top: 1rem;
+    background-color: WhiteSmoke;
+
+    h2 {
+      color: rgb(61, 142, 148);
+    }
+
+    .example-spacer {
+      flex: 1 1 auto;
+    }
+  }
+
+  .toolbar2 {
+    width: 100%;
+    min-width: 500px;
+    background-color: #2D2929;
+    color: white;
+
+    button {
+      height: 100%;
+      width: 8rem;
+
+      &:hover {
+        background-color: #3B3939;
+      }
+    }
+  }
+
+  .weather-today-container {
+    width: 100%;
+    min-width: 500px;
+
+    app-weather-today {
+      background-color: #f5faf8; // #f5f8fa #E8EAF6
+    }
+  }
+
+  .weather-forecast-container {
+    width: 100%;
+    min-width: 500px;
+    margin-top: 1.5rem;
+
+    app-weather-forecast {
+      text-align: center;
+      width: 100%;
+
+    }
+  }
+
+
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+  html, body {
+    font-size: 13px;
+  }
+
+  .global-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  html, body {
+    font-size: 11px;
+  }
+
+  .global-container {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 800px) and (min-width: 650px) {
+  html, body {
+    font-size: 11px;
+
+  }
+
+  .global-container {
+    width: 100%;
+
+    app-weather-forecast {
+
+      .forecast_container {
+        margin: 0;
+
+        .item_title {
+          font-size: 1.5rem;
+          margin-bottom: 0.7rem;
+
+          h3 {
+            font-size: 1rem;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  .temperature_display h1 {
+    padding-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 650px) and (min-width: 500px) {
+  html, body {
+    font-size: 10px;
+  }
+
+  .global-container {
+    width: 100%;
+  }
+
+  app-forecast-selected-dialog {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  html, body {
+    font-size: 9px;
+  }
+
+  .global-container {
+    width: 100%;
+
+  }
+
+  .small {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,28 @@
+<!--<p >{{forecastWeatherInfo.city}}</p> &lt;!&ndash; getSortedDataForFiveDays( forecastWeatherInfo.list ) &ndash;&gt;-->
+
+<div class="forecast_container">
+
+    <div class="forecast_inner_upper">
+
+      <div class="forecast_item"  *ngFor="let item of array" #forecastItem (click)=" getSelectedDayWeather(getItemDate(item), forecastWeatherInfo.list )" > <!--  (click)="rememberElement( setIdToDiv(item) ); getSelectedDayWeather( forecastWeatherInfo.list )"     id="{{setIdToDiv(item)}}" -->
+
+        <div class="item_title"><h3>{{getForecastDate(item)[0].toUpperCase()}}</h3></div>
+
+        <div class="item_date">{{getForecastDate(item)[1].toUpperCase()}} {{getForecastDate(item)[2].toUpperCase()}}</div>
+
+        <div class="item_img"><img [src]="getWeatherIcon(item.weather[0].icon)" alt=""></div>
+
+        <h1 class="item_degree degree">{{mathRoundTemp(item.main.temp)}}<sup>o</sup>C</h1>
+
+        <div class="item_weather_description">{{item.weather[0].description}}</div>
+
+      </div>
+
+    </div>
+
+  <div class="forecast_inner_lower"></div>
+
+</div>
+
+
+

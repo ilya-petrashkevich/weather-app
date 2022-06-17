@@ -1,0 +1,102 @@
+
+
+
+
+.dialog-container {
+  width: 100%;
+  background-color: Gainsboro;
+  overflow: hidden;
+
+  .forecast_inner_lower_hourly {
+    width: 100%;
+    padding: 1.5rem;
+
+    h3 {
+      color: rgb(61, 142, 148);
+    }
+  }
+
+  .selected_day_description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+
+    h3 {
+      font-weight: bold;
+    }
+
+    .item-container {
+      max-width: 10%;
+
+      .day_description_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img {
+          width: 80%;
+        }
+
+        .small {
+          font-size: 10px;
+        }
+
+        .padding_left {
+          padding-left: 0.5rem;
+        }
+
+        .hidden {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+}
+
+@media (max-width: 800px) and (min-width: 650px) {
+}
+
+@media (max-width: 650px) and (min-width: 500px) {
+
+  .dialog-container {
+
+    .selected_day_description {
+      padding: .5rem;
+
+      h3 {
+        font-size: .8rem;
+      }
+      span {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .dialog-container {
+
+    .selected_day_description {
+      padding: .5rem;
+
+      h3 {
+        font-size: .8rem;
+      }
+      span {
+        font-size: .8rem;
+      }
+    }
+  }
+
+}
+
+
+
+

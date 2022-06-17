@@ -1,0 +1,76 @@
+
+.weather_display {
+  background-color: Gainsboro;
+  border-radius: 5px;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  //background-color: Gainsboro;
+
+
+  .weather_display_inner_upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    color: rgb(61, 142, 148);
+  }
+
+  .date_display {
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+
+  .weather_display_inner_lower {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+
+    .weather_short_description {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .temperature_display {
+      display: flex;
+      flex-direction: column;
+      justify-content:flex-end;
+
+      .degree {
+        font-size: 3rem;
+        margin-bottom: 16px;
+      }
+
+    }
+
+    .day_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      th, td {
+        text-align: left;
+        font-weight: normal;
+      }
+
+      td {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+//.day_info th, td {
+//  text-align: left;
+//  font-weight: normal;
+//}
+
+//.day_info td {
+//  padding-left: 0.5rem;
+//}

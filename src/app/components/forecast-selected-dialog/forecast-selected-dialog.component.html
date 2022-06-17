@@ -1,0 +1,70 @@
+<!--<p>forecast-selected-dialog works!</p>-->
+
+<!--<p *ngFor=" let item of data" >{{ item.dt_txt.split(" ")[0].split("-").reverse().join("-") }}</p>-->
+
+
+<div class="dialog-container">
+
+  <div class="forecast_inner_lower_hourly">
+
+    <div class="hourly_header"><h3>HOURLY</h3></div>
+
+  </div>
+
+  <div class="selected_day_description">
+
+    <div class="item-container" *ngFor=" let item of data; let i = index">
+
+        <div class="day_description_item" *ngIf="i < 1"><!-- *ngIf="i < 1" -->
+
+            <h3 class="selected_day">{{ getForecastDateData(item.dt_txt)[0] }}</h3>
+
+            <span class="description_img_container"><img class="hidden" src="http://openweathermap.org/img/wn/01d@2x.png" alt="" ></span>
+
+            <span>Forecast</span>
+
+            <span>Temp(<sup>о</sup>С)</span>
+
+            <span>ReelFeel</span>
+
+            <span >Wind <span class="small">(km/h)</span></span>
+
+        </div>
+
+    </div>
+
+    <div class="item-container" *ngFor=" let item of data; let i = index">
+
+      <div class="day_description_item padding_left" > <!-- *ngIf="i >= 1" -->
+
+        <h3 class="selected_day">{{getForecastDateData(item.dt_txt)[4].split("").slice(0,5).join("")}}</h3>
+
+        <span class="description_img_container"><img [src]="getWeatherIcon(item.weather[0].icon )" alt=""></span>
+
+        <span>{{item.weather[0].main}}</span>
+
+        <span>{{mathRoundTemp(item.main.temp)}}<sup>о</sup></span>
+
+        <span>{{mathRoundTemp(item.main.feels_like)}}<sup>о</sup></span>
+
+        <span >{{item.wind.speed}}</span>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+<mat-dialog-actions align="end">
+
+  <button mat-raised-button mat-dialog-close>Close</button>
+
+</mat-dialog-actions>
+
+
+
+

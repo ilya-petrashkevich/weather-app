@@ -1,0 +1,129 @@
+.forecast_container {
+  margin: 1.5rem;
+
+  .forecast_inner_upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    .forecast_item {
+      width: 15%;
+      padding: 1rem;
+      background-color: Gainsboro;
+      border-radius: 5px;
+      cursor:pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: rgb(230, 230, 230);
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+      }
+
+      .item_title {
+        font-size: 2rem;
+        color: rgb(61, 142, 148);
+        margin-bottom: 0.7rem;
+
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .item_date {
+        font-size: 1rem;
+      }
+
+      .item_img {
+        text-align: center;
+        width: 100%;
+      }
+
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+
+      .item_weather_description {
+        font-size: 1rem;
+      }
+
+    }
+
+    .active-card {
+      background-color: rgb(230, 230, 230);
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+}
+
+@media (max-width: 800px) and (min-width: 650px) {
+
+  .forecast_container {
+    margin: 0;
+
+    .item_title {
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .item_degree {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) and (min-width: 500px) {
+
+  .forecast_container {
+    margin: 0;
+
+    .item_title {
+      font-size: 1.5rem;
+      margin-bottom: 0.7rem;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+
+  .forecast_container {
+    margin: 0;
+
+    .item_title {
+      font-size: 1.5rem;
+      margin-bottom: 0.7rem;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+
+
+<div class="weather_display">
+
+ <div class="weather_display_inner_upper">
+   <h3>CURRENT WEATHER</h3>
+
+   <div class="date_display">{{todayDate(todayWeatherInfo.dt)}}</div>
+ </div>
+
+ <div class="weather_display_inner_lower">
+
+   <div class="pic_display">
+
+     <div class="img_container">
+
+       <img [src]="getWeatherIcon(todayWeatherInfo.weather[0].icon)" alt="" srcset="">
+
+     </div>
+
+     <span class="weather_short_description">{{todayWeatherInfo.weather[0].description}}</span>
+   </div>
+
+   <div class="temperature_display">
+
+     <h1 class="degree">{{mathRoundTemp(todayWeatherInfo.main.temp)}}<sup>o</sup>C</h1>
+
+     <span class="how_feel">Real Feel {{mathRoundTemp(todayWeatherInfo.main.feels_like)}}<sup>o</sup></span>
+
+   </div>
+
+    <div class="day_info">
+
+     <table>
+       <tr>
+         <th scope="row">Sunrise:</th>
+         <td>{{todaySunrise(todayWeatherInfo.sys.sunrise)}}</td>
+       </tr>
+       <tr>
+         <th scope="row">Sunset:</th>
+         <td>{{todaySunset(todayWeatherInfo.sys.sunset)}}</td>
+       </tr>
+       <tr>
+         <th scope="row">Duration:</th>
+         <td>{{todayDuration(todayWeatherInfo.sys.sunset, todayWeatherInfo.sys.sunrise)}} hr</td>
+       </tr>
+     </table>
+
+   </div>
+
+ </div>
+
+</div>
